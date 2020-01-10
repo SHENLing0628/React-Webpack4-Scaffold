@@ -2,7 +2,6 @@ const path = require('path')
 const webpack = require('webpack')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HappyPack = require('happypack')
 const os = require('os')
 const happyThreadPool = HappyPack.ThreadPool({ size: os.cpus().length })
@@ -34,9 +33,8 @@ module.exports = {
         ]
       },
       {
-        test: /\.(scss|css|sass)$/,
+        test: /\.(sc|sas|c)ss$/,
         use: [
-          MiniCssExtractPlugin.loader,
           "style-loader", // 创建style标签，并将css添加进去
           "css-loader", // 编译css
           "postcss-loader",
@@ -88,11 +86,6 @@ module.exports = {
       threadPool: happyThreadPool,
       //允许happyPack输出日志
       verbose: true
-    }),
-    //css单独提取
-    new MiniCssExtractPlugin({
-      filename: '[name].css',
-      chunkFilename: '[id].css'
     })
   ]
 

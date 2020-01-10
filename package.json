@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --config webpack.dev.config.js --color --progress --open",
-    "start": "npm install && webpack-dev-server --config webpack.dev.config.js --color --progress --open",
+    "start": "webpack-dev-server --config webpack.dev.config.js --color --progress --open",
     "build": "webpack --config webpack.prod.config.js --color --progress"
   },
   "author": "shenling",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.7.7",
+    "@babel/plugin-transform-runtime": "^7.7.6",
     "@babel/preset-env": "^7.7.7",
     "@babel/preset-react": "^7.7.4",
     "babel-eslint": "^10.0.3",
@@ -45,6 +46,8 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.7.0",
+    "@babel/runtime": "^7.7.7",
     "core-js": "^2.6.11",
     "eslint-loader": "^3.0.3",
     "react": "^16.12.0",

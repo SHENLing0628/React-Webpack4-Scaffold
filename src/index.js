@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { render } from 'react-dom'
 import Routes from './router'
 import { AppContainer } from 'react-hot-loader'
 
@@ -15,7 +14,6 @@ if (module.hot) {
 }
 
 function renderWithHotReload (Routes) {
-	console.log(Routes)
 	ReactDOM.render(
 		<AppContainer>
 			<Routes />
