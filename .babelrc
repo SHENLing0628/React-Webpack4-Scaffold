@@ -1,5 +1,9 @@
 {
-  "presets": ["@babel/preset-env","@babel/preset-react"],
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-react"
+    // "es2015"
+  ],
   // react-hot-loader在--hot基础上做了额外的处理，来保证状态可以存下来
   "plugins": ["react-hot-loader/babel"]
 }

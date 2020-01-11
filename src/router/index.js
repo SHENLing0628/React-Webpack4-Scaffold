@@ -1,7 +1,8 @@
 import React from 'react'
 import { Route, Redirect, Switch, HashRouter as Router } from 'react-router-dom'
-import Test from 'pages/Test'
 import Main from 'pages/Main'
+
+console.log(module.hot)
 
 const Routes = () => (
 	<Router>
