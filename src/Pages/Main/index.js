@@ -29,7 +29,8 @@ export default class Main extends React.Component {
 			<div className='main'>
 				<Common/>
 				<CommonServiceComponent/>
-				<Button>TEST</Button>
+				<Button type='primary'>TEST</Button>
+				<button>normal button</button>
 			</div>
 		)
 	}
