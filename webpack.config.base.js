@@ -38,7 +38,8 @@ module.exports = {
 						// 使用happypack搭配webpack4，进行多线程打包，提高打包效率，面对大型项目效果明显
 						loader: 'happypack/loader?id=happyBabel' 
 					}
-				]
+				],
+				
 			},
 			{
 				test: /\.(sc|sas|c)ss$/,

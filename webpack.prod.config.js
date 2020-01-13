@@ -25,10 +25,5 @@ module.exports = merge(commonConfig, {
 		}
 	},
 	plugins: [
-		new webpack.DefinePlugin({
-			'process.env': {
-				VUEP_BASE_URL: '/'
-			}
-		})
 	]
 })

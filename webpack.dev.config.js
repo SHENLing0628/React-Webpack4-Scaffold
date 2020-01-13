@@ -10,7 +10,7 @@ const devWebpackConfig = merge(commonConfig, { //引入webpack已配置好的通
 	entry: [
 		'react-hot-loader/patch'
 	],
-	devtool: 'cheap-module-eval-soure-map',
+	devtool: 'inline-source-map',
 	output: {
 		//输出目录
 		path: path.resolve(__dirname, './dist'),
@@ -21,11 +21,6 @@ const devWebpackConfig = merge(commonConfig, { //引入webpack已配置好的通
 	plugins: [
 		//开启HMR（热替换功能，替换更新部分，不重载页面）相当于在命令行加 --hot
 		new webpack.HotModuleReplacementPlugin(),
-		new webpack.DefinePlugin({
-			'process.env': {
-				VUEP_BASE_URL: '/'
-			}
-		})
 	],
 	devServer: {
 		hot: true,

@@ -1,7 +1,7 @@
 import React from 'react'
 import './index.scss'
 import SampleAction from 'actions/sample'
-
+import { Button } from 'antd'
 import Common from 'components/common'
 import CommonServiceComponent from 'serviceComponents/CommonServiceComponent'
 
@@ -29,6 +29,7 @@ export default class Main extends React.Component {
 			<div className='main'>
 				<Common/>
 				<CommonServiceComponent/>
+				<Button>TEST</Button>
 			</div>
 		)
 	}
