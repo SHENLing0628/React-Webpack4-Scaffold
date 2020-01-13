@@ -21,7 +21,8 @@ module.exports = {
 			components: path.resolve(__dirname, './src/components'),
 			serviceComponents: path.resolve(__dirname, './src/serviceComponents'),
 			actions: path.resolve(__dirname, './src/actions'),
-			api: path.resolve(__dirname, './src/api')
+			api: path.resolve(__dirname, './src/api'),
+			assets: path.resolve(__dirname, './src/assets')
 		}
 	},
 	module: {
@@ -78,6 +79,7 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			filename: 'index.html', //最终创建的文件名
 			template: path.join(__dirname, './src/index.html'), //制定模板路径
+			favicon:  path.resolve("./src/assets/images/logo.png"),
 			minify: {
 				collapseWhitespace: true //去除空白
 			}
