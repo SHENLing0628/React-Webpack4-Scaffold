@@ -1,13 +1,15 @@
 import axios from 'axios'
-import qs from 'qs'
+// import qs from 'qs';
 import config from './_httpConfig'
+
+import APILIST from 'api'
 
 const service = axios.create(config)
 
 // 传参格式化
 service.interceptors.request.use(
 	config => {
-		if (config.method === 'post') config.body = qs.stringify(config.data)
+		if (config.method === 'post') config.body = JSON.stringify(config.data)
 		return config
 	},
 	error => {
@@ -18,14 +20,21 @@ service.interceptors.request.use(
 service.interceptors.response.use(
 	res => {
 		// 这里可根据实际情况做一些操作
-		// if (res.status === 200) return res.data
-		return res.data
-	}, error => {
-		if (error && error.code === 'ECONNABORTED' && error.message.indexOf('timeout') !== -1) {
-			return Promise.reject('请求超时')
+		if (res.status === 200) {
+			if (res.data!=null&&res.data.code === 23001) {
+				// 跳转到登录页面
+				window.localStorage.clear()
+				setTimeout(() => {
+					window.location.href = APILIST.loginUrl
+				}, 200)
+				return
+			} return res.data
 		} else {
-			return Promise.reject('服务器网络错误')
+			return res.data
 		}
+
+	}, error => {
+		return Promise.reject(error)
 	}
 )
 

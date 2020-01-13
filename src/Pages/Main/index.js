@@ -1,5 +1,6 @@
 import React from 'react'
 import './index.scss'
+import SampleAction from 'actions/sample'
 
 import Common from 'components/common'
 import CommonServiceComponent from 'serviceComponents/CommonServiceComponent'
@@ -11,6 +12,16 @@ export default class Main extends React.Component {
 		this.state = {
       
 		}
+	}
+
+	componentDidMount () {
+		this.requestInfo()
+	}
+
+	requestInfo = async () => {
+		console.log(SampleAction)
+		let res = await SampleAction.getAlgorithmsInfo({ code:'simple2complex' })
+		console.log(res)
 	}
 
 	render () {

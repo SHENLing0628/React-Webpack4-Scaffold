@@ -1,5 +1,5 @@
 const path = require('path')
-
+const babelpolyfill = require("babel-polyfill")
 const webpack = require('webpack')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -8,7 +8,9 @@ const os = require('os')
 const happyThreadPool = HappyPack.ThreadPool({ size: os.cpus().length })
 
 module.exports = {
-	entry: ['src/index.js'],
+	entry: [
+		'src/index.js'
+	],
 	output: {
 		path: path.resolve(__dirname, './dist') //输出目录
 	},
@@ -93,7 +95,7 @@ module.exports = {
 			//共享进程池threadPool：HappyThreadPool代表共享进程池，即为多个happyPack实例使用同个进程池中的子进程去处理任务，防止资源占用过多
 			threadPool: happyThreadPool,
 			//允许happyPack输出日志
-			verbose: true
+			verbose: false
 		})
 	],
 	performance: false // 关闭性能提示

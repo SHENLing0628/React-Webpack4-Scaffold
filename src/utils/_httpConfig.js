@@ -1,16 +1,17 @@
 import http from 'http'
 import https from 'https'
+// import APILIST from '../api/apiList';
 
 export default {
 	headers: {
-		'Content-Type': 'application/json;charset=GB2312;',
+		'Content-Type': 'application/json;charset=UTF-8',
 		'X-Requested-With': 'XMLHttpRequest',
 		'Accept-Language': 'zh-CN',
+		// 'token': APILIST.TOKEN
 	},
 	// `baseURL` 将自动加在 `url` 前面，除非 `url` 是一个绝对 URL
-	baseURL: process.env.NODE_ENV === 'development' ? 'http://172.10.10.232:8083/' : 'http://172.10.10.232:8083/',
 	// 超时设置
-	timeout: 120000000,
+	timeout: 100000000,
 	// 跨域是否带token
 	withCredentials: true,
 	// 响应的数据格式 json/blob/document/arraybuffer/text/stream

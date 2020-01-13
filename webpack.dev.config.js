@@ -9,7 +9,6 @@ const devWebpackConfig = merge(commonConfig, { //引入webpack已配置好的通
 	mode: 'development',
 	entry: [
 		'react-hot-loader/patch'
-		// path.join(__dirname, './src/index.js')
 	],
 	devtool: 'cheap-module-eval-soure-map',
 	output: {
@@ -37,7 +36,8 @@ const devWebpackConfig = merge(commonConfig, { //引入webpack已配置好的通
 		proxy:{
 			// 代理到后端的服务地址，会拦截所有以api开头的请求地址
 			'/api': 'http://localhost:8000'
-		}
+		},
+		clientLogLevel: 'none'
 	}
 });
 
