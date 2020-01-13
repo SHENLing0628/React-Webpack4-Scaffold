@@ -19,7 +19,7 @@
     |-- assets 存放图片、字体等文件
     |-- components 公共组件
     |-- serviceComponents 服务化组件
-    |-- Pages 页面
+    |-- pages 页面
     |-- router 路由
     |-- utils 接口请求配置
     |-- index.js 页面入口
