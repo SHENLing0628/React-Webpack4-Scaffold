@@ -3,7 +3,7 @@ import './index.scss'
 import SampleAction from 'actions/sample'
 import { Button } from 'antd'
 import Common from 'components/common'
-import CommonServiceComponent from 'serviceComponents/CommonServiceComponent'
+import IconComponent from 'components/IconComponent'
 
 export default class Main extends React.Component {
 
@@ -28,7 +28,8 @@ export default class Main extends React.Component {
 		return (
 			<div className='main'>
 				<Common/>
-				{/* <CommonServiceComponent/> */}
+				{/* 使用Iconfont组件 */}
+				<IconComponent className='icon' icon='#iconLogininvalidx'/>
 				<Button type='primary'>TEST</Button>
 				<button>normal button</button>
 			</div>
