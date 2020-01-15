@@ -29,6 +29,8 @@
 |-- webpack.prod.config.js webpack在生产模式下，打包构建项目的配置
 |-- dist 打包构建后的文件
 
+### 具体配置方法文档： https://juejin.im/post/5e1c111cf265da3e0a550011 
+
 ### 参考
 * https://juejin.im/post/5cfe4b13f265da1bb13f26a8#heading-28
 * https://github.com/Z6T/react-webpack4-cook
