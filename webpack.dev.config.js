@@ -16,7 +16,6 @@ const devWebpackConfig = merge(commonConfig, { //引入webpack已配置好的通
 		path: path.resolve(__dirname, './dist'),
 		//文件名称
 		filename: 'bundle.js',
-		// chunkFilename: '[name].js'
 	},
 	plugins: [
 		//开启HMR（热替换功能，替换更新部分，不重载页面）相当于在命令行加 --hot
@@ -45,11 +44,6 @@ module.exports = new Promise((resolve, reject) => {
       process.env.PORT = port
       // add port to devServer config
 			devWebpackConfig.devServer.port = port
-
-      // // Add FriendlyErrorsPlugin
-      // devWebpackConfig.plugins.push(
-      //   new openBrowserWebpackPlugin({ url: `http://localhost:${port}` })
-      // )
 
 			// resolve(devWebpackConfig)
 			devWebpackConfig.plugins.push(new FriendlyErrorsPlugin({

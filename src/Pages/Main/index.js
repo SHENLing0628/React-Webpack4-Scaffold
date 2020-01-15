@@ -28,7 +28,7 @@ export default class Main extends React.Component {
 		return (
 			<div className='main'>
 				<Common/>
-				<CommonServiceComponent/>
+				{/* <CommonServiceComponent/> */}
 				<Button type='primary'>TEST</Button>
 				<button>normal button</button>
 			</div>
