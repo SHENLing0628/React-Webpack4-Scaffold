@@ -56,6 +56,7 @@ module.exports = {
 				use: {
 					loader: 'url-loader',
 					options: {
+						esModule: false, //启用commonJS模块语法
 						outputPath: 'images/', // 图片输出的路径
 						limit: 10 * 1024 // url-loader在图片较小的时候回把图片进行BASE64编码，大于limit的时候
 					}

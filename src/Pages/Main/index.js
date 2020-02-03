@@ -32,7 +32,7 @@ export default class Main extends React.Component {
 				{/* 使用Iconfont组件 */}
 				<IconComponent className='icon' icon='#iconLogininvalidx'/>
 				<Button type='primary'>TEST123</Button>
-				<img src={require('../../assets/images/logo.png')} alt=''/>
+				<img className='imageIcon' src={require('../../assets/images/logo.png')}/>
 				<button>normal button</button>
 			</div>
 		)

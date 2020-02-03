@@ -1,5 +1,5 @@
 .main {
-  width: 400px;
+  min-width: 400px;
   min-height: 200px;
   background-color: yellow;
 }
@@ -7,4 +7,9 @@
 .icon {
   width: 200px;
   height: 200px;
+}
+
+.imageIcon {
+  width: 100px;
+  height: 100px;
 }
