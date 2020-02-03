@@ -10,7 +10,7 @@ const devWebpackConfig = merge(commonConfig, { //引入webpack已配置好的通
 	entry: [
 		'react-hot-loader/patch'
 	],
-	devtool: 'inline-source-map',
+	devtool: 'source-map',
 	output: {
 		//输出目录
 		path: path.resolve(__dirname, './dist'),

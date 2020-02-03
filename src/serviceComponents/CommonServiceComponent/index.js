@@ -12,7 +12,7 @@ export default class CommonServiceComponent extends React.Component {
 	render () {
 		return (
 			<div>
-        COMMON SERVICE COMPONENTS
+        COMMON SERVICE COMPONENTS2
 			</div>
 		)
 	}

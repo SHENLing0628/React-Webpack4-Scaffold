@@ -28,9 +28,11 @@ export default class Main extends React.Component {
 		return (
 			<div className='main'>
 				<Common/>
+				<Common/>
 				{/* 使用Iconfont组件 */}
 				<IconComponent className='icon' icon='#iconLogininvalidx'/>
-				<Button type='primary'>TEST</Button>
+				<Button type='primary'>TEST123</Button>
+				<img src={require('../../assets/images/logo.png')} alt=''/>
 				<button>normal button</button>
 			</div>
 		)

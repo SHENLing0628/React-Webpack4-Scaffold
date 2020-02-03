@@ -12,7 +12,7 @@ export default class Common extends React.Component {
 	render () {
 		return (
 			<div>
-        COMMON COMPONENTS
+        COMMON COMPONENTS123
 			</div>
 		)
 	}
